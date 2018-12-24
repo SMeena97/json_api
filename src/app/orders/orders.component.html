@@ -1,0 +1,38 @@
+
+<app-sidebar></app-sidebar>
+<app-header></app-header>
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Orders</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    
+
+    <table *ngIf="customers">
+        <!-- ADD HEADERS -->
+        <tr>
+            <th style="margin: 10px; padding: 5px;">Order Id</th>
+                <th style="margin: 10px; padding: 5px;">Name</th>
+                    <th style="margin: 10px; padding: 5px;">Restaurant</th>
+                    <th style="margin: 10px; padding: 5px;">Date</th>
+                    <th style="margin: 10px; padding: 5px;">Payment Method</th>
+                    <th style="margin: 10px; padding: 5px;">Process Status</th>
+                    <th style="margin: 10px; padding: 5px;">Total Amount</th>
+                    <th style="margin: 10px; padding: 5px;">Commission</th>
+        </tr>
+
+        <!-- BIND ARRAY TO TABLE -->
+        <tr *ngFor="let custBitemii of customers">
+            <td style="margin: 10px; padding: 5px;">{{custBitemii.Orderid}}</td>
+                <td style="margin: 10px; padding: 5px;">{{custBitemii.Name}}</td>
+                    <td style="margin: 10px; padding: 5px;">{{custBitemii.Restaurant}}</td>
+                    <td style="margin: 10px; padding: 5px;">{{custBitemii.Date}}</td>
+                    <td style="margin: 10px; padding: 5px;">{{custBitemii.Paymentmethod}}</td>
+                    <td style="margin: 10px; padding: 5px;">{{custBitemii.Processstatus}}</td>
+                    <td style="margin: 10px; padding: 5px;">{{custBitemii.Totalamount}}</td>
+                    <td style="margin: 10px; padding: 5px;">{{custBitemii.Commission}}</td>
+        </tr>
+    </table>
+</div>
